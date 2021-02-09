@@ -9,9 +9,10 @@ import javax.persistence.GeneratedValue
 import javax.persistence.Id
 import javax.persistence.ManyToOne
 
+
 fun LocalDateTime.format() = this.format(englishDateFormatter)
 
-private val daysLookup = (1..31).associate { it.toLong() to getOrdinal(it) }
+val daysLookup = (1..31).associate { it.toLong() to getOrdinal(it) }
 
 private val englishDateFormatter = DateTimeFormatterBuilder()
     .appendPattern("yyyy-MM-dd")
