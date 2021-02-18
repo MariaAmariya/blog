@@ -1,20 +1,34 @@
 {{> header}}
 
-<div class="articles">
+<div class="header">
+    <h2>{{title}}</h2>
+</div>
 
-    {{#banner.title}}
-        <section>
-            <header class="banner">
-                <h2 class="banner-title">{{banner.title}}</h2>
-            </header>
-            <div class="banner-content">
-                {{banner.content}}
+<div class="row">
+    <div class="left-column">
+
+        {{#articles}}
+            <div class="card">
+                    <h2><a href="/article/{{slug}}">{{title}}</a></h2>
+                    <h5>{{addedAt}}</h5>
+                    <div class="article-img" style="height:200px;">Image</div>
+                    <div>
+                        {{headline}}
+                    </div>
             </div>
-        </section>
-    {{/banner.title}}
+        {{/articles}}
+    </div>
+    <div class="right-column">
+        <div class="card">
+            <h2>About Author</h2>
+            <div class="article-img" style="height:100px;">Image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        </div>
+    </div>
+</div>
 
-    ...
-
+<div class="footer">
+    <h2>Footer</h2>
 </div>
 
 {{> footer}}

@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ボディ */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* ヘッダ */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: #fff;
+}
+
+/* 隣り合って浮かぶ2つの等しく列を作成 */
+/* Left column */
+.left-column {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.right-column {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* 画像プロパティ */
+.article-img {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* 記事にカード効果を追加 */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* 列の後にフロートをクリア*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* フッター */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* レスポンシブレイアウト、画面の幅が800ピクセル未満の場合は、2つの列を隣り合わせではなく積み重ね。*/
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
